@@ -26,6 +26,7 @@
     }
     #ym{
       fill: white;
+      cursor: pointer;
     }
     body, #ym{
       transition: all 0.3s ease-out;
@@ -38,15 +39,17 @@
     .show #ym{
       fill: black;
     }
-    .show .form{
+    .show .modal{
       top: 0;
       transition: all 0.4s 0.8s cubic-bezier(0.18, 0.89, 0.25, 1.17);
     }
 
-    .form{
+    .modal{
       position: absolute;
       top: 100%;
       bottom: 0;
+      left: 0;
+      right: 0;
       margin: auto;
       max-height: 300px;
       width: 100vw;
@@ -55,7 +58,7 @@
     }
     @media (min-width:767px){
       .form{
-        transform: translateX(-25%);
+        margin: auto;
         max-width: 350px;
       }
     }
@@ -99,25 +102,27 @@
 </head>
 
 <body>
-  <form class="form">
-    <div class="field">
-      <input id="first-name" type="text" required>
-      <label for="first-name">First Name</label>
-    </div>
-    <div class="field">
-      <input id="last-name" type="text" required>
-      <label for="last-name">Last Name</label>
-    </div>
-    <div class="field">
-      <input id="current-job" type="text" required>
-      <label for="current-job">Current Job</label>
-    </div>
-    <div class="field">
-      <input id="email" type="text" required>
-      <label for="email">Email</label>
-    </div>
-    <input type="button" value="GO!">
-  </form>
+  <div class="modal">
+    <form class="form">
+      <div class="field">
+        <input id="first-name" type="text" required>
+        <label for="first-name">First Name</label>
+      </div>
+      <div class="field">
+        <input id="last-name" type="text" required>
+        <label for="last-name">Last Name</label>
+      </div>
+      <div class="field">
+        <input id="current-job" type="text" required>
+        <label for="current-job">Current Job</label>
+      </div>
+      <div class="field">
+        <input id="email" type="text" required>
+        <label for="email">Email</label>
+      </div>
+      <input type="button" value="GO!">
+    </form>
+  </div>
   <div class="content">
     <?xml version="1.0" encoding="utf-8"?>
     <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
