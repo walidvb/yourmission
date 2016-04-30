@@ -1,94 +1,92 @@
 @import "anims";
+
+svg{
+  max-width: 60%;
+  height: auto;
+  margin: auto;
+  display: block;
+}
+.content{
+}
+
 body{
-      width: 100vw;
-      height: 100vh;
-      margin: 0;
-      font-family: 'Raleway', sans-serif;
-      font-size: 16px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-    .step{
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.step{
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.show .form{
+  top: 0;
+  transition-property: all;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.18, 0.89, 0.25, 1.17);
+}
 
-    body{
-      background: black;
-      color: white;
-    }
-    svg{
-      fill: white;
-    }
-    body, svg{
-      transition: all 0.3s ease-out;
-    }
-    .sshow{
-      background: white;
-      color: black;
+.form{
+  position: absolute;
+  top: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-height: 300px;
+  width: calc(100vw - 30px);
+  background: white;
+  padding: 0 15px;
+}
+@media (min-width:767px){
+  .form{
 
-    }
-    .show svg{
-      fill: black;
-    }
-    .show .form{
-      top: 0;
-      transition: all 0.4s 0.8s cubic-bezier(0.18, 0.89, 0.25, 1.17);
-    }
+    max-width: 350px;
+  }
+  .content{
+    max-width: 400px;
+  }
+}
+.field{
+  display: inline-block;
+  margin-bottom: 1.8em;
+  position: relative;
+  width: 100%;
+}
+label{
+  display: block;
+  position: absolute;
+  top: 0.75em;
+  left: 0.5em;
+  color: black;
+  transition: all 0.08s ease-out;
+}
+input:focus + label, input:valid + label{
+  top: -1.5em;
+  font-size: 0.77em;
+}
+input{
+  padding: 10px 0px 10px 5px;
+  font: inherit;
+  width: calc(100% - 5px);
+  border: 0;
+  box-shadow: inset 0px 0px 1px 0px grey;
+}
+input:focus{
+  outline: none;
+}
 
-    .form{
-      display: none;
-      position: absolute;
-      top: 100%;
-      bottom: 0;
-      margin: auto;
-      max-height: 300px;
-      width: 100vw;
-      background: white;
-      padding: 0 15px;
-    }
-    @media (min-width:767px){
-      .form{
-        transform: translateX(-25%);
-        max-width: 350px;
-      }
-    }
-    .field{
-      display: inline-block;
-      margin-bottom: 1.8em;
-      position: relative;
-      width: 100%;
-    }
-    label{
-      display: block;
-      position: absolute;
-      top: 0.75em;
-      left: 0.5em;
-      color: black;
-      transition: all 0.08s ease-out;
-    }
-    input:focus + label, input:valid + label{
-      top: -1.5em;
-      font-size: 0.77em;
-    }
-    input{
-      padding: 10px 0px 10px 5px;
-      font: inherit;
-      width: 100%;
-      border: 0;
-      box-shadow: inset 0px 0px 1px 0px grey;
-    }
-    input:focus{
-      outline: none;
-    }
-
-    input[type='button']{
-      border-radius: 0;
-      -webkit-appearance: none;
-      border: none;
-      background: black;
-      color: white;
-    }
+input[type='button']{
+  border-radius: 0;
+  -webkit-appearance: none;
+  border: none;
+  background: black;
+  color: white;
+  width: 100%;
+}

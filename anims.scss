@@ -2,31 +2,21 @@ svg{
   max-height: 95vh;
 }
 svg #anim{
-  > *{
-    stroke-dasharray: 100%;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-  }
-}
-
-
-
-svg #anim{
   $delay: 0s;
-  $duration: .2s;
-  > *{
-    transition: all $duration;
-  }
+  $duration: .13s;
   @mixin transit($on, $off){
     stroke-dashoffset: $on;
+    stroke-dasharray: $on;
     transition-delay: $delay;
     .show &{stroke-dashoffset: $off;}
     $delay: $delay + $duration*0.7;
   }
+  > *{
+    transition: stroke-dashoffset $duration;
+  }
   #y-line{
     @include transit(1040px, 750px);
   }
-
   #y-top{
     @include transit(1040px, 910px);
   }
@@ -40,16 +30,31 @@ svg #anim{
     @include transit(1040px, 660px);
   }
 }
-#anim > *{
-  stroke: white;
-}
-.show #anim > *{
-  //stroke: black;
-  //transition: all 0.3s 5s;
+// 750ms animation
+body, svg{
+  transition-delay: 1.3s;
+  transition-duration: 1.5s;
 }
 
-@keyframes fill{
-  to{
-    stroke-dashoffset: 900px;
+body{
+  background: black;
+  color: white;
+  transition-property: all;
+}
+
+svg{
+  stroke: white;
+  fill: white;
+}
+
+.show {
+  color: black;
+  background-color: white;
+  svg{
+    stroke: black;
+    fill: black;
+  }
+  .form{
+    transition-delay: 3s;
   }
 }
