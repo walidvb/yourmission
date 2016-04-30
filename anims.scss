@@ -32,8 +32,8 @@ svg #anim{
 }
 // 750ms animation
 body, svg{
-  transition-delay: 1.3s;
-  transition-duration: 1.5s;
+  transition-delay: 0s;
+  transition-duration: .5s;
 }
 
 body{
@@ -48,9 +48,13 @@ svg{
 }
 
 .show {
+  transition-delay: 1.3s;
+  transition-duration: 1.5s;
   color: black;
   background-color: white;
   svg{
+    transition-delay: 1.3s;
+    transition-duration: 1.5s;
     stroke: black;
     fill: black;
   }

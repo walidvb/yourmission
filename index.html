@@ -4,17 +4,13 @@
   <title>Your Mission</title>
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
   <div class="form" id="mc_embed_signup">
     <form action="//your-mission.us13.list-manage.com/subscribe/post?u=1054b0e00ebc20b0c91b84ae4&amp;id=91f04b775c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
       <div id="mc_embed_signup_scroll">
-        <div class="mc-field-group field">
-          <input required type="text" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-        	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-        </label>
-        </div>
         <div class="mc-field-group field">
           <input required type="text" value="" name="FNAME" class="" id="mce-FNAME">
         	<label for="mce-FNAME">First Name <span class="asterisk">*</span></label>
@@ -28,15 +24,21 @@
         	<label for="mce-CURJOB">Current Job  <span class="asterisk">*</span>
         </label>
         </div>
+        <div class="mc-field-group field">
+          <input required type="text" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+          <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+          </label>
+        </div>
       	<div id="mce-responses" class="clear">
       		<div class="response" id="mce-error-response" style="display:none"></div>
       		<div class="response" id="mce-success-response" style="display:none"></div>
       	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
         <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_1054b0e00ebc20b0c91b84ae4_91f04b775c" tabindex="-1" value=""></div>
-        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+        <div class="clear"><input type="submit" value="Apply" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
       </div>
     </form>
   </div>
+
   <div class="content">
     <?xml version="1.0" encoding="utf-8"?>
     <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -79,20 +81,20 @@
     form.onclick = function(e){
       e.stopPropagation();
     };
+    var formOn = false;
     form.addEventListener('transitionend', function(e){
-      if(/form/.test(e.target.className)){
+      if(/form/.test(e.target.className) && formOn){
         setTimeout(function(){
-          if(!document.querySelectorAll('input:focus').length){
-            document.getElementById('mce-FNAME').focus();
-          }
+          formOn && !document.querySelectorAll('input:focus').length && document.getElementById('mce-FNAME').focus();
         }, 600);
       }
     });
     document.body.onclick = function(e){
+      formOn = !formOn;
       document.body.className = /show/.test(document.body.className) ? '' : 'show';
     }
   </script>
-
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
   <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='CURJOB';ftypes[3]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
   <!--End mc_embed_signup-->
 </body>

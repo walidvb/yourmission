@@ -2,59 +2,77 @@ svg {
   max-height: 95vh; }
 
 svg #anim > * {
-  transition: stroke-dashoffset 0.13s; }
+  -webkit-transition: stroke-dashoffset 0.13s;
+          transition: stroke-dashoffset 0.13s; }
 svg #anim #y-line {
   stroke-dashoffset: 1040px;
   stroke-dasharray: 1040px;
-  transition-delay: 0s; }
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s; }
   .show svg #anim #y-line {
     stroke-dashoffset: 750px; }
 svg #anim #y-top {
   stroke-dashoffset: 1040px;
   stroke-dasharray: 1040px;
-  transition-delay: 0.091s; }
+  -webkit-transition-delay: 0.091s;
+          transition-delay: 0.091s; }
   .show svg #anim #y-top {
     stroke-dashoffset: 910px; }
 svg #anim #m-vert {
   stroke-dashoffset: 1040px;
   stroke-dasharray: 1040px;
-  transition-delay: 0.182s; }
+  -webkit-transition-delay: 0.182s;
+          transition-delay: 0.182s; }
   .show svg #anim #m-vert {
     stroke-dashoffset: 580px; }
 svg #anim #m-bottom {
   stroke-dashoffset: 1040px;
   stroke-dasharray: 1040px;
-  transition-delay: 0.273s; }
+  -webkit-transition-delay: 0.273s;
+          transition-delay: 0.273s; }
   .show svg #anim #m-bottom {
     stroke-dashoffset: 900px; }
 svg #anim #m-diag {
   stroke-dashoffset: 1040px;
   stroke-dasharray: 1040px;
-  transition-delay: 0.364s; }
+  -webkit-transition-delay: 0.364s;
+          transition-delay: 0.364s; }
   .show svg #anim #m-diag {
     stroke-dashoffset: 660px; }
 
 body, svg {
-  transition-delay: 1.3s;
-  transition-duration: 1.5s; }
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s; }
 
 body {
   background: black;
   color: white;
-  transition-property: all; }
+  -webkit-transition-property: all;
+          transition-property: all; }
 
 svg {
   stroke: white;
   fill: white; }
 
 .show {
+  -webkit-transition-delay: 1.3s;
+          transition-delay: 1.3s;
+  -webkit-transition-duration: 1.5s;
+          transition-duration: 1.5s;
   color: black;
   background-color: white; }
   .show svg {
+    -webkit-transition-delay: 1.3s;
+            transition-delay: 1.3s;
+    -webkit-transition-duration: 1.5s;
+            transition-duration: 1.5s;
     stroke: black;
     fill: black; }
   .show .form {
-    transition-delay: 3s; }
+    -webkit-transition-delay: 3s;
+            transition-delay: 3s; }
 
 svg {
   max-width: 60%;
@@ -62,16 +80,32 @@ svg {
   margin: auto;
   display: block; }
 
+.content {
+  cursor: pointer; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; }
+
 body {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
   margin: 0;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative; }
 
 .step {
@@ -81,9 +115,12 @@ body {
 
 .show .form {
   top: 0;
-  transition-property: all;
-  transition-duration: 0.4s;
-  transition-timing-function: cubic-bezier(0.18, 0.89, 0.25, 1.17); }
+  -webkit-transition-property: all;
+          transition-property: all;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  -webkit-transition-timing-function: cubic-bezier(0.18, 0.89, 0.25, 1.17);
+          transition-timing-function: cubic-bezier(0.18, 0.89, 0.25, 1.17); }
 
 .form {
   position: absolute;
@@ -103,6 +140,10 @@ body {
 
   .content {
     max-width: 400px; } }
+@media (min-width: 991px) {
+  input {
+    border: none !important;
+    box-shadow: inset 0px 0px 1px 0px grey; } }
 .field {
   display: inline-block;
   margin-bottom: 1.8em;
@@ -115,7 +156,8 @@ label {
   top: 0.75em;
   left: 0.5em;
   color: black;
-  transition: all 0.08s ease-out; }
+  -webkit-transition: all 0.08s ease-out;
+          transition: all 0.08s ease-out; }
 
 .asterisk {
   transition: all 0.08s ease-out; }
@@ -131,7 +173,8 @@ input {
   font: inherit;
   width: calc(100% - 5px);
   border: 0;
-  box-shadow: inset 0px 0px 1px 0px grey; }
+  border-bottom: 1px solid grey;
+  border-radius: 0; }
 
 input:focus {
   outline: none; }
@@ -143,5 +186,3 @@ input[type='button'] {
   background: black;
   color: white;
   width: 100%; }
-
-/*# sourceMappingURL=styles.css.map */
