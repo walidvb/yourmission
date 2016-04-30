@@ -71,7 +71,9 @@
       e.stopPropagation();
     };
     form.addEventListener('transitionend', function(e){
-      document.getElementById('first-name').focus();
+      if(/form/.test(e.target.className)){
+        setTimeout(function(){document.getElementById('first-name').focus();}, 600);
+      }
     });
     document.body.onclick = function(e){
       document.body.className = /show/.test(document.body.className) ? '' : 'show';

@@ -65,6 +65,7 @@ svg {
 body {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   margin: 0;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
