@@ -90,6 +90,15 @@ input:focus + label, input:valid + label{
     opacity: 0;
   }
 }
+input.mce-line-error + label{
+  color: #FF4136;
+}
+.response{
+  margin-bottom: 10px;
+}
+div.mce_inline_error{
+  display: none;
+}
 input{
   padding: 10px 0px 10px 5px;
   font: inherit;

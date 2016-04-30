@@ -160,13 +160,24 @@ label {
           transition: all 0.08s ease-out; }
 
 .asterisk {
-  transition: all 0.08s ease-out; }
+  -webkit-transition: all 0.08s ease-out;
+          transition: all 0.08s ease-out; }
 
 input:focus + label, input:valid + label {
   top: -1.5em;
   font-size: 0.77em; }
   input:focus + label .asterisk, input:valid + label .asterisk {
-    opacity: 0; }
+    opacity: 0;
+    filter: alpha(opacity=0); }
+
+input.mce-line-error + label {
+  color: #FF4136; }
+
+.response {
+  margin-bottom: 10px; }
+
+div.mce_inline_error {
+  display: none; }
 
 input {
   padding: 10px 0px 10px 5px;
