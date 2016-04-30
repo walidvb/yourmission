@@ -72,7 +72,11 @@
     };
     form.addEventListener('transitionend', function(e){
       if(/form/.test(e.target.className)){
-        setTimeout(function(){document.getElementById('first-name').focus();}, 600);
+        setTimeout(function(){
+          if(!document.querySelectorAll('input:focus').length){
+            document.getElementById('first-name').focus();
+          }
+        }, 600);
       }
     });
     document.body.onclick = function(e){
