@@ -7,12 +7,18 @@ svg{
   display: block;
 }
 .content{
+  cursor: pointer;
+}
+
+html, body{
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 body{
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
   margin: 0;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
@@ -54,6 +60,12 @@ body{
     max-width: 400px;
   }
 }
+@media (min-width:991px){
+  input{
+    border: none!important;
+    box-shadow: inset 0px 0px 1px 0px grey;
+  }
+}
 .field{
   display: inline-block;
   margin-bottom: 1.8em;
@@ -77,8 +89,10 @@ input{
   font: inherit;
   width: calc(100% - 5px);
   border: 0;
-  box-shadow: inset 0px 0px 1px 0px grey;
+  border-bottom: 1px solid grey;
+  border-radius: 0;
 }
+
 input:focus{
   outline: none;
 }
