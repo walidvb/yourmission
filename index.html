@@ -26,7 +26,7 @@
       <label for="email">Email</label>
     </div>
     <div class="field">
-      <input type="button" value="GO!">
+      <input type="button" value="APPLY">
     </div>
   </form>
   <div class="content">
@@ -71,16 +71,18 @@
     form.onclick = function(e){
       e.stopPropagation();
     };
+    var formOn = false;
     form.addEventListener('transitionend', function(e){
-      if(/form/.test(e.target.className)){
+      if(/form/.test(e.target.className) && formOn){
         setTimeout(function(){
-          if(!document.querySelectorAll('input:focus').length){
+          if(formOn && !document.querySelectorAll('input:focus').length){
             document.getElementById('first-name').focus();
           }
         }, 600);
       }
     });
     document.body.onclick = function(e){
+      formOn = !formOn;
       document.body.className = /show/.test(document.body.className) ? '' : 'show';
     }
   </script>
