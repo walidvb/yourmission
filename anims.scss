@@ -1,0 +1,55 @@
+svg{
+  max-height: 95vh;
+}
+svg #anim{
+  > *{
+    stroke-dasharray: 100%;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+  }
+}
+
+
+
+svg #anim{
+  $delay: 0s;
+  $duration: .2s;
+  > *{
+    transition: all $duration;
+  }
+  @mixin transit($on, $off){
+    stroke-dashoffset: $on;
+    transition-delay: $delay;
+    .show &{stroke-dashoffset: $off;}
+    $delay: $delay + $duration*0.7;
+  }
+  #y-line{
+    @include transit(1040px, 750px);
+  }
+
+  #y-top{
+    @include transit(1040px, 910px);
+  }
+  #m-vert{
+    @include transit(1040px, 580px);
+  }
+  #m-bottom{
+    @include transit(1040px, 900px);
+  }
+  #m-diag{
+    @include transit(1040px, 660px);
+  }
+}
+#anim > *{
+  stroke: white;
+}
+.show #anim > *{
+  //stroke: black;
+  //transition: all 0.3s 5s;
+}
+
+@keyframes fill{
+  to{
+    stroke-dashoffset: 900px;
+  }
+}

@@ -3,104 +3,7 @@
 <head>
   <title>Your Mission</title>
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-  <style>
-    body{
-      width: 100vw;
-      height: 100vh;
-      margin: 0;
-      font-family: 'Raleway', sans-serif;
-      font-size: 16px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-
-    }
-    .step{
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    body{
-      background: black;
-      color: white;
-    }
-    #ym{
-      fill: white;
-      cursor: pointer;
-    }
-    body, #ym{
-      transition: all 0.3s ease-out;
-    }
-    .show{
-      background: white;
-      color: black;
-
-    }
-    .show #ym{
-      fill: black;
-    }
-    .show .modal{
-      top: 0;
-      transition: all 0.4s 0.8s cubic-bezier(0.18, 0.89, 0.25, 1.17);
-    }
-
-    .modal{
-      position: absolute;
-      top: 100%;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-      max-height: 300px;
-      width: 100vw;
-      background: white;
-      padding: 0 15px;
-    }
-    @media (min-width:767px){
-      .form{
-        margin: auto;
-        max-width: 350px;
-      }
-    }
-    .field{
-      display: inline-block;
-      margin-bottom: 1.8em;
-      position: relative;
-      width: 100%;
-    }
-    label{
-      display: block;
-      position: absolute;
-      top: 0.75em;
-      left: 0.5em;
-      color: black;
-      transition: all 0.08s ease-out;
-    }
-    input:focus + label, input:valid + label{
-      top: -1.5em;
-      font-size: 0.77em;
-    }
-    input{
-      padding: 10px 0px 10px 5px;
-      font: inherit;
-      width: 100%;
-      border: 0;
-      box-shadow: inset 0px 0px 1px 0px grey;
-    }
-    input:focus{
-      outline: none;
-    }
-
-    input[type='button']{
-      border-radius: 0;
-      -webkit-appearance: none;
-      border: none;
-      background: black;
-      color: white;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -129,14 +32,35 @@
     <?xml version="1.0" encoding="utf-8"?>
     <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
     <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-    <svg version="1.1" id="ym" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-    	 width="266.957px" height="162.608px" viewBox="0 0 266.957 162.608" enable-background="new 0 0 266.957 162.608"
-    	 xml:space="preserve">
-    <path class="" d="M64.125,25.813v2.1h-11.85l30.6,52.35l27.6-52.35H97.426v-2.1h28.649v2.1h-13.05l-28.95,55.05v47.55h13.95v2.101h-49.5
-    	v-2.101h13.8V88.662l-34.8-60.75h-11.7v-2.1H64.125z"/>
-    <path class="" d="M153.307,25.813l25.948,74.7h0.301l26.398-74.7h37.5v2.1h-13.799v102.6h13.799v2.101h-49.199v-2.101h13.65v-102.6h-0.301
-    	l-36.9,104.701h-2.398l-37.05-104.701h-0.301v102.6h13.801v2.101h-30v-2.101h13.8v-102.6h-13.8v-2.1H153.307z"/>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1280px"
+    	 height="720px" viewBox="0 0 1280 720" enable-background="new 0 0 1280 720" xml:space="preserve">
+     <g id="anim">
+
+       <line id="y-line" fill="none" stroke="#000000" stroke-width="11" stroke-miterlimit="10" x1="415.333" y1="367.667" x2="546.667" y2="120.167"/>
+
+       <line id="y-top" fill="none" stroke="#000000" stroke-width="9.5" stroke-miterlimit="10" x1="607.232" y1="119" x2="482.805" y2="119"/>
+
+       <line id="m-vert" fill="none" stroke="#000000" stroke-width="11" stroke-miterlimit="10" x1="623.616" y1="123.542" x2="623.616" y2="580.5"/>
+
+       <line id="m-bottom" fill="none" stroke="#000000" stroke-width="11" stroke-miterlimit="10" x1="557.195" y1="582.991" x2="690.037" y2="582.991"/>
+       <polyline id="m-diag" fill="none" stroke="#000000" stroke-width="11" stroke-miterlimit="10" points="969.446,119.562
+       964.176,119.562 839.312,472.75 	"/>
+     </g>
+    <g id="base">
+    	<g id="base">
+    		<polygon points="421.255,367.527 415.941,355.572 280.443,123.542 332.694,123.542 332.694,114.244 332.694,114.244
+    			118.819,114.244 118.819,123.542 170.627,123.542 324.723,392.768 324.723,577.859 263.616,577.859 263.616,587.158
+    			482.805,587.158 482.805,577.859 421.255,577.859 		"/>
+    		<g>
+    			<polygon points="842.805,445.019 727.676,114.244 557.195,114.244 557.195,123.542 618.303,123.542 628.93,123.542
+    				630.258,123.542 794.096,587.158 804.724,587.158 848.561,462.73 			"/>
+    			<polygon points="1127.085,123.542 1127.085,114.244 969.446,114.244 969.446,123.542 969.446,577.859 909.225,577.859
+    				909.225,587.158 1127.085,587.158 1127.085,577.859 1065.978,577.859 1065.978,123.542 			"/>
+    		</g>
+    	</g>
+    </g>
     </svg>
+
     <div class="step">Step Into A Parallel World</div>
   </div>
 
