@@ -117,9 +117,14 @@ label {
   color: black;
   transition: all 0.08s ease-out; }
 
+.asterisk {
+  transition: all 0.08s ease-out; }
+
 input:focus + label, input:valid + label {
   top: -1.5em;
   font-size: 0.77em; }
+  input:focus + label .asterisk, input:valid + label .asterisk {
+    opacity: 0; }
 
 input {
   padding: 10px 0px 10px 5px;
