@@ -1,5 +1,44 @@
 @import "anims";
 
+.ie{
+  svg *{
+    transition-delay: 1s!important;
+  }
+
+  .content{
+    margin: auto;
+    margin-top: 33vh;
+  }
+  input{
+    border: 1px solid grey;
+  }
+  &.show{
+    .form{top: 0px;}
+  }
+  &.ie-9 label{
+    top: -1.5em;
+    font-size: 0.77em;
+    .asterisk{
+      opacity: 0;
+    }
+  }
+  &.show {
+    transition-delay: 0s;
+    transition-duration: .5s;
+    color: black;
+    background-color: white;
+    svg{
+      transition-delay: .3s;
+      transition-duration: .5s;
+      stroke: black;
+      fill: black;
+    }
+    .form{
+      transition-delay: 2s;
+    }
+  }
+}
+
 svg{
   max-width: 60%;
   height: auto;
@@ -42,6 +81,7 @@ body{
 .form{
   position: absolute;
   top: 100%;
+  .ie &{ top:110%; }
   bottom: 0;
   left: 0;
   right: 0;
@@ -53,7 +93,6 @@ body{
 }
 @media (min-width:767px){
   .form{
-
     max-width: 350px;
   }
   .content{
@@ -83,7 +122,7 @@ label{
 .asterisk{
   transition: all 0.08s ease-out;
 }
-input:focus + label, input:valid + label{
+input:focus + label, input:valid + label, .ie-9 label{
   top: -1.5em;
   font-size: 0.77em;
   .asterisk{
@@ -103,7 +142,9 @@ input{
   padding: 10px 0px 10px 5px;
   font: inherit;
   width: calc(100% - 5px);
-  border: 0;
+  border-top: none;
+  border-right: none;
+  border-left: none;
   border-bottom: 1px solid grey;
   border-radius: 0;
 }
